@@ -4,7 +4,7 @@ import com.intuit.karate.junit5.Karate;
 class RegisterRunner {
     @Karate.Test
     Karate runValid() {
-        return Karate.run("classpath:features/Register/register-post.feature").relativeTo(getClass());
+        return Karate.run("classpath:features/Register/register-valid.feature").relativeTo(getClass());
     }
 
     @Karate.Test
