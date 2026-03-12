@@ -1,0 +1,38 @@
+[
+  {
+    "id": "TC01",
+    "description": "Register with valid data",
+    "payload": {
+      "clientName": "#(name)",
+      "clientEmail": "#(email)"
+    },
+    "status": 201
+  },
+  {
+    "id": "TC02",
+    "description": "Register with same name ",
+    "payload": {
+      "clientName": "TestAPI3",
+      "clientEmail": "#(email)"
+    },
+    "status": 201
+  },
+  {
+    "id": "TC03",
+    "description": "Register with sub email domain ",
+    "payload": {
+      "clientName": "#(name)",
+      "clientEmail": "#(subEmail)"
+    },
+    "status": 201
+  },
+  {
+    "id": "TC04",
+    "description": "Register with name space",
+    "payload": {
+      "clientName": "#(name)",
+      "clientEmail": "#(email)"
+    },
+    "status": 201
+  }
+]

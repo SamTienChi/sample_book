@@ -1,0 +1,79 @@
+[
+  {
+    "id": "TC05",
+    "description": "Missing client name",
+    "payload": {
+      "clientEmail": "#(email)"
+    },
+    "status": 400
+  },
+  {
+    "id": "TC06",
+    "description": "Empty client name",
+    "payload": {
+      "clientName": " ",
+      "clientEmail": "#(email)"
+    },
+    "status": 400
+  },
+  {
+    "id": "TC07",
+    "description": "Client name contains only number",
+    "payload": {
+      "clientName": 1234,
+      "clientEmail": "#(email)"
+    },
+    "status": 400
+  },
+  {
+    "id": "TC08",
+    "description": "Missing client email",
+    "payload": {
+      "clientName": "#(name)"
+    },
+    "status": 400
+  },
+  {
+    "id": "TC09",
+    "description": "Empty client email",
+    "payload": {
+      "clientName": "#(name)",
+      "clientEmail": " "
+    },
+    "status": 400
+  },
+  {
+    "id": "TC10",
+    "description": "Client email existed",
+    "payload": {
+      "clientName": "#(name)",
+      "clientEmail": "testAPI3@gmail.com"
+    },
+    "status": 409
+  },
+  {
+    "id": "TC11",
+    "description": "Invalid format email",
+    "payload": {
+      "clientName": "#(name)",
+      "clientEmail": "Thisistestgmail,com.vn"
+    },
+    "status": 400
+  },
+  {
+    "id": "TC12",
+    "description": " - Empty payload",
+    "payload": {},
+    "status": 400
+  },
+  {
+    "id": "TC13",
+    "description": "Invalid format json",
+    "payload": {
+      "client": "#(name)",
+      "Email": "#(email)",
+      "Name": "#(name)"
+    },
+    "status": 400
+  }
+]
