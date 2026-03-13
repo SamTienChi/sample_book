@@ -1,0 +1,52 @@
+[
+  {
+    "id": "TC_list_08",
+    "description": "Verify API with invalid type",
+    "payload": {
+      "type": "history",
+      "limit": 5
+    },
+    "status": 400,
+    "error": "Invalid value for query parameter 'type'. Must be one of: fiction, non-fiction."
+  },
+  {
+    "id": "TC_list_09",
+    "description": "Verify API with Special characters in type",
+    "payload": {
+      "type": "@!#~",
+      "limit": 5
+    },
+    "status": 400,
+    "error": "Invalid value for query parameter 'type'. Must be one of: fiction, non-fiction."
+  },
+  {
+    "id": "TC_list_10",
+    "description": "Verify API with number in type",
+    "payload": {
+      "type": 123,
+      "limit": 5
+    },
+    "status": 400,
+    "error": "Invalid value for query parameter 'type'. Must be one of: fiction, non-fiction."
+  },
+  {
+    "id": "TC_list_11",
+    "description": "Verify API when limits less than 1",
+    "payload": {
+      "type": "fiction",
+      "limit": 0
+    },
+      "status": 400,
+    "error": "Invalid value for query parameter 'limit'. Must be greater than 0."
+  },
+  {
+    "id": "TC_list_13",
+    "description": "Verify API when limits greater than 20",
+    "payload": {
+      "type": "fiction",
+      "limit": 21
+    },
+    "status": 400,
+    "error": "Invalid value for query parameter 'limit'. Cannot be greater than 20."
+  }
+]

@@ -10,9 +10,9 @@
   },
   {
     "id": "TC02",
-    "description": "Register with same name ",
+    "description": "Register with same name but difference email ",
     "payload": {
-      "clientName": "TestAPI3",
+      "clientName": "ThisIsTestSameName",
       "clientEmail": "#(email)"
     },
     "status": 201
@@ -30,7 +30,7 @@
     "id": "TC04",
     "description": "Register with name space",
     "payload": {
-      "clientName": "#(name)",
+      "clientName": "#(name)    #(name)",
       "clientEmail": "#(email)"
     },
     "status": 201

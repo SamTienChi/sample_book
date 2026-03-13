@@ -1,0 +1,17 @@
+{
+  "id": "#number",
+  "entityType": "#string",
+  "available": "#boolean",
+  "timestamp": "#number",
+  "created": "#string",
+  "isbn": "##string",
+  "GSI1SK": "#string",
+  "name": "#string",
+  "current-stock": "#number",
+  "GSI1PK": "#string",
+  "price": "#number",
+  "PK": "#string",
+  "author": "#string",
+  "type": "#string",
+  "SK": "#string"
+}

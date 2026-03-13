@@ -1,0 +1,47 @@
+[
+  {
+    "id": "TC_GSB_05",
+    "description": "Verify API when Id is empty",
+    "payload": {
+      "id": "  "
+    },
+    "status": 400,
+    "error": "The book id must be a number."
+  },
+  {
+    "id": "TC_GSB_06",
+    "description": "Verify API when Id is text",
+    "payload": {
+      "id": "abcs"
+    },
+    "status": 400,
+    "error": "The book id must be a number."
+  },
+  {
+    "id": "TC_GSB_07",
+    "description": "Verify API when Id contains special character",
+    "payload": {
+      "id": "!@#$%^&*()"
+    },
+    "status": 400,
+    "error": "The book id must be a number."
+  },
+  {
+    "id": "TC_GSB_08",
+    "description": "Verify API when Id is negative number",
+    "payload": {
+      "id": -123
+    },
+    "status": 404,
+    "error": "No book with id -123"
+  },
+  {
+    "id": "TC_GSB_09",
+    "description": "Verify API when id does not exist.",
+    "payload": {
+      "id": 99999999
+    },
+    "status": 404,
+    "error": "No book with id 99999999"
+  }
+]

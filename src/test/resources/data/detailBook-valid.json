@@ -1,0 +1,34 @@
+[
+  {
+    "id": "TC_GSB_01",
+    "description": "Verify API returns a book successfully with id",
+    "payload": {
+      "id": 1
+    },
+    "status": 200
+  },
+  {
+    "id": "TC_GSB_02",
+    "description": "Verify API when Id is decimal number",
+    "payload": {
+      "id": 1.233
+    },
+    "status": 200
+  },
+  {
+    "id": "TC_GSB_03",
+    "description": "Verify API when Id is string number",
+    "payload": {
+      "id": "1"
+    },
+    "status": 200
+  },
+  {
+    "id": "TC_GSB_04",
+    "description": "Verify API with other id",
+    "payload": {
+      "id": 3
+    },
+    "status": 200
+  }
+]

@@ -4,6 +4,12 @@ Feature: Create Client with valid data
     * path 'api-clients'
     * def RandomData = Java.type('helpers.RandomData')
 
+  @setup
+  Scenario: Generate test data
+    * def data = call read('classpath:utils/register-data.js');
+    * def normalCases = data.normalCases;
+    * def sameNameCases = data.sameNameCases;
+
   Scenario Outline: <id> - <description>
     * def name = RandomData.randomName();
     * def email = RandomData.randomEmail();
@@ -14,4 +20,25 @@ Feature: Create Client with valid data
     Then status <status>
     And match response contains { accessToken: '#string' }
     Examples:
-      | read('classpath:data/register-valid.json') |
+      | karate.setup().normalCases |
+
+  Scenario Outline: <id> - <description>
+    * def email = RandomData.randomEmail();
+
+    * print 'email:', email
+    * print 'payload:', payload
+                # first register
+    Given request <payload>
+    When method post
+    Then status <status>
+
+        # second register
+    * def email = RandomData.randomEmail();
+    Given request <payload>
+    When method post
+    Then status <status>
+    And  match response contains { accessToken: '#string' }
+
+    Examples:
+      | karate.setup().sameNameCases |
+

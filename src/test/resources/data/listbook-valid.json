@@ -1,0 +1,55 @@
+[
+  {
+    "id": "TC_list_01",
+    "description": "Verify API returns books list succefully",
+    "payload": {
+      "type": "fiction",
+      "limit": 5
+    },
+    "status": 200
+  },
+  {
+    "id": "TC_list_02",
+    "description": "Verify API returns books list succefully",
+    "payload": {
+      "type": "",
+      "limit": ""
+    },
+    "status": 200
+  },
+  {
+    "id": "TC_list_03",
+    "description": "verify API respect type with data: non-fiction",
+    "payload": {
+      "type": "non-fiction",
+      "limit": 5
+    },
+    "status": 200
+  },
+  {
+    "id": "TC_list_04",
+    "description": "Verify API respect limit parameters",
+    "payload": {
+      "type": "fiction",
+      "limit": 20
+    },
+    "status": 200
+  },
+  {
+    "id": "TC_list_05",
+    "description": "Verify API returns books list succefully with missing type",
+    "payload": {
+      "limit": 1
+    },
+    "status": 200
+  },
+  {
+    "id": "TC_list_06",
+    "description": "Verify API returns books list succefully with missing limit",
+    "payload": {
+      "type": "non-fiction",
+      "limit": ""
+    },
+    "status": 200
+  }
+]
