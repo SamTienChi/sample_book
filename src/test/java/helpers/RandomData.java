@@ -3,6 +3,9 @@ import com.github.javafaker.Faker;
 
     public class RandomData {
         static Faker faker = new Faker();
+
+        public static int randomId() { return faker.randomInt(); }
+
         public static String randomName() {
             return faker.name().fullName();
         }

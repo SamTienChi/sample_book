@@ -11,7 +11,7 @@ Feature: Create Client with Invalid data
     Given request <payload>
     When method post
     Then status <status>
-    And match response contains { error: '#string' }
+    And match response == { error: '#(error)'}
     Examples:
       |  read('classpath:data/register-invalid.json') |
 

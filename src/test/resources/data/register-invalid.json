@@ -5,16 +5,18 @@
     "payload": {
       "clientEmail": "#(email)"
     },
-    "status": 400
+    "status": 400,
+    "error": "Invalid or missing client name."
   },
   {
     "id": "TC06",
     "description": "Empty client name",
     "payload": {
-      "clientName": " ",
+      "clientName": "",
       "clientEmail": "#(email)"
     },
-    "status": 400
+    "status": 400,
+    "error": "Invalid or missing client name."
   },
   {
     "id": "TC07",
@@ -23,7 +25,8 @@
       "clientName": 1234,
       "clientEmail": "#(email)"
     },
-    "status": 400
+    "status": 400,
+    "error": "Registration failed"
   },
   {
     "id": "TC08",
@@ -31,7 +34,8 @@
     "payload": {
       "clientName": "#(name)"
     },
-    "status": 400
+    "status": 400,
+    "error": "Invalid or missing client email."
   },
   {
     "id": "TC09",
@@ -40,7 +44,8 @@
       "clientName": "#(name)",
       "clientEmail": " "
     },
-    "status": 400
+    "status": 400,
+    "error": "Invalid or missing client email."
   },
   {
     "id": "TC10",
@@ -49,7 +54,8 @@
       "clientName": "#(name)",
       "clientEmail": "testAPI3@gmail.com"
     },
-    "status": 409
+    "status": 409,
+    "error": "API client already registered. Try a different email."
   },
   {
     "id": "TC11",
@@ -58,13 +64,15 @@
       "clientName": "#(name)",
       "clientEmail": "Thisistestgmail,com.vn"
     },
-    "status": 400
+    "status": 400,
+    "error": "Invalid or missing client email."
   },
   {
     "id": "TC12",
     "description": " - Empty payload",
     "payload": {},
-    "status": 400
+    "status": 400,
+    "error": "Invalid or missing client name."
   },
   {
     "id": "TC13",
@@ -74,6 +82,7 @@
       "Email": "#(email)",
       "Name": "#(name)"
     },
-    "status": 400
+    "status": 400,
+    "error": "Invalid or missing client name."
   }
 ]
