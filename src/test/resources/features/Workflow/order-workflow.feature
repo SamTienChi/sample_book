@@ -25,9 +25,10 @@ Feature: Complete Order Flow
     * call read('classpath:features/Api/Order/updateOrder.feature') { orderId: #(orderId), customerName: 'Mike' }
 
     # get an order
-    * call read('classpath:features/Api/Order/getAnOrder.feature') { orderId: #(orderId) }
+    * call read('classpath:features/Api/Order/getAnOrder.feature@success') { orderId: #(orderId) }
 
     # delete order
     * call read('classpath:features/Api/Order/deleteOrder.feature') { orderId: #(orderId) }
 
-
+ # get an order
+    * call read('classpath:features/Api/Order/getAnOrder.feature@@notfound') { orderId: #(orderId) }
