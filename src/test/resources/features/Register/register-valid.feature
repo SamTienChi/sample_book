@@ -1,6 +1,6 @@
 Feature: Create Client with valid data
   Background:
-    * url baseUrl
+    Given url baseUrl
     * path 'api-clients'
     * def RandomData = Java.type('helpers.RandomData')
 
@@ -25,12 +25,12 @@ Feature: Create Client with valid data
   Scenario Outline: <id> - <description>
     * def email = RandomData.randomEmail();
 
-    * print 'email:', email
-    * print 'payload:', payload
                 # first register
     Given request <payload>
     When method post
     Then status <status>
+    And path 'api-clients'
+    * print 'response', response
 
         # second register
     * def email = RandomData.randomEmail();

@@ -9,11 +9,11 @@ class RegisterRunner {
 
     @Karate.Test
     Karate runInvalid() {
-        return Karate.run("classpath:features/Register/register-invalid.feature");
+        return Karate.run("classpath:features/Register/register-invalid.feature").relativeTo(getClass());
     }
 
     @Karate.Test
     Karate runAll() {
-        return Karate.run("classpath:features/Register");
+        return Karate.run("classpath:features/Register").relativeTo(getClass());
     }
 }
