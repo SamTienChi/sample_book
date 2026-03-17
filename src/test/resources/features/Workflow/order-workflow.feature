@@ -16,7 +16,7 @@ Feature: Complete Order Flow
     * def create = call read('classpath:features/Api/Order/submitOrder.feature') { bookId: #(bookId), customerName: 'John'}
     * def orderId = create.orderId
     * print 'Order id call:', orderId
-    * match orderId == '#number'
+    * match orderId == '#string'
 
     # get all orders
     * call read('classpath:features/Api/Order/getAllOrder.feature')
@@ -24,6 +24,8 @@ Feature: Complete Order Flow
     # update order
     * call read('classpath:features/Api/Order/updateOrder.feature') { orderId: #(orderId), customerName: 'Mike' }
 
+    # get an order
+    * call read('classpath:features/Api/Order/getAnOrder.feature') { orderId: #(orderId) }
 
     # delete order
     * call read('classpath:features/Api/Order/deleteOrder.feature') { orderId: #(orderId) }
