@@ -1,7 +1,8 @@
+@regression @bookApi @negative
 Feature: Get list book with valid params
 Background:
   * url baseUrl
-  * path 'books'
+  * path endpoints.books
   * def bookSchema = read('classpath:Schema/book-schema.json')
 
   @setup

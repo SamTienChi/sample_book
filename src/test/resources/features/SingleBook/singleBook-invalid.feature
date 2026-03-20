@@ -1,7 +1,8 @@
+@regression @bookDetailApi @negative
 Feature: Get a single book with valid data
 Background:
   * url baseUrl
-  * path 'books/'
+  * path endpoints.books
 
   @setup
   Scenario:

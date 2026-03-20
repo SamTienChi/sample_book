@@ -1,7 +1,8 @@
+@regression @bookApi @negative
 Feature: Get list book with invalid data
   Background:
     * url baseUrl
-    * path 'books'
+    * path endpoints.books
 
   @setup
   Scenario: Generate test data

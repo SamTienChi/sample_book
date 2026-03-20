@@ -1,7 +1,8 @@
+@regression @registerApi @negative
 Feature: Create Client with Invalid data
   Background:
     * url baseUrl
-    * path 'api-clients'
+    * path endpoints.clients
     * def RandomData = Java.type('helpers.RandomData')
 
   Scenario Outline: <id> - <description>

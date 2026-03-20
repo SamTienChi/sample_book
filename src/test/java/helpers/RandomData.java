@@ -1,5 +1,6 @@
 package helpers;
 import com.github.javafaker.Faker;
+import java.util.UUID;
 
     public class RandomData {
         static Faker faker = new Faker();
@@ -15,7 +16,7 @@ import com.github.javafaker.Faker;
         }
 
         public static String randomEmail() {
-            return faker.name().username() + "@gmail.com";
+            return faker.name().username() + "_" + UUID.randomUUID() + "@gmail.com";
         }
 
     }

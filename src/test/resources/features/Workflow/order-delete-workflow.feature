@@ -1,4 +1,5 @@
-Feature: Complete Order Flow
+@regression @orderDeleteFlow
+Feature: Complete Delete Order Flow
 
   Scenario: Register → Books → Order → Update → Delete
     # register client get token
@@ -13,7 +14,7 @@ Feature: Complete Order Flow
     * match bookId == '#number'
 
     # create order
-    * def create = call read('classpath:features/Api/Order/submitOrder.feature') { bookId: #(bookId), customerName: 'John'}
+    * def create = call read('classpath:features/Api/Order/submitOrder.feature@createSuccess') { bookId: #(bookId), customerName: 'John'}
     * def orderId = create.orderId
     * print 'Order id call:', orderId
     * match orderId == '#string'
@@ -30,5 +31,5 @@ Feature: Complete Order Flow
     # delete order
     * call read('classpath:features/Api/Order/deleteOrder.feature') { orderId: #(orderId) }
 
- # get an order
+    # get an order
     * call read('classpath:features/Api/Order/getAnOrder.feature@@notfound') { orderId: #(orderId) }

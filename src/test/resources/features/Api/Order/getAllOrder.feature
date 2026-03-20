@@ -1,7 +1,8 @@
+@api
 Feature: Get Orders
 Background:
   * url baseUrl
-  * path 'orders'
+  * path endpoints.orders
 
   Scenario: Get orders
     When method get

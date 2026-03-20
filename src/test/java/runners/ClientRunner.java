@@ -5,6 +5,7 @@ public class ClientRunner {
     @Karate.Test
     Karate runTest() {
         return Karate.run("classpath:features")
-                .relativeTo(getClass());
+                .relativeTo(getClass())
+                .tags("~@api");
     }
 }

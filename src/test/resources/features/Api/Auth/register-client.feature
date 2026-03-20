@@ -1,7 +1,8 @@
+@api
 Feature: Register API client
   Background:
-    * url baseUrl
-    * path 'api-clients'
+    * url 'https://simple-books-api.click'
+    * path endpoints.clients
     * def RandomData = Java.type('helpers.RandomData')
 
 

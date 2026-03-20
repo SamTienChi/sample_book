@@ -1,3 +1,4 @@
+@api
 Feature: Set authorization header
 
   Scenario:

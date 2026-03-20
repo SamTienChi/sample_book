@@ -1,7 +1,8 @@
+@regression @bookDetailApi @positive
 Feature: Get a single book with valid data
   Background:
     * url baseUrl
-    * path 'books'
+    * path endpoints.books
     * def detailBookSchema = read('classpath:Schema/detailBook-schema.json')
 
   @setup

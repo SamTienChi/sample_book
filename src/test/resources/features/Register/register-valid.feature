@@ -1,7 +1,8 @@
+@regression @registerApi @positive
 Feature: Create Client with valid data
   Background:
     Given url baseUrl
-    * path 'api-clients'
+    * path endpoints.clients
     * def RandomData = Java.type('helpers.RandomData')
 
   @setup

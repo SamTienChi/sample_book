@@ -1,7 +1,8 @@
+@api
 Feature: Get books
 Background:
   * url baseUrl
-  * path 'books'
+  * path endpoints.books
 
   Scenario: Get available book
     When method get

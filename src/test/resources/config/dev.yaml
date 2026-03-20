@@ -1,0 +1,7 @@
+baseUrl: https://simple-books-api.click
+
+endpoints:
+  status: /status
+  books: /books
+  orders: /orders
+  clients: /api-clients
